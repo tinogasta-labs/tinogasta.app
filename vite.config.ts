@@ -1,17 +1,17 @@
 import {
   vitePlugin as remix,
   cloudflareDevProxyVitePlugin as remixCloudflareDevProxy,
-} from "@remix-run/dev";
-import { defineConfig } from "vite";
-import tsconfigPaths from "vite-tsconfig-paths";
+} from '@remix-run/dev'
+import { defineConfig } from 'vite'
+import tsconfigPaths from 'vite-tsconfig-paths'
 
-const MODE = process.env.NODE_ENV;
+const MODE = process.env.NODE_ENV
 
 export default defineConfig({
   build: {
     sourcemap: true,
-    cssMinify: MODE === "production",
-    minify: MODE === "production",
+    cssMinify: MODE === 'production',
+    minify: MODE === 'production',
   },
   plugins: [
     remixCloudflareDevProxy(),
@@ -24,4 +24,4 @@ export default defineConfig({
     }),
     tsconfigPaths(),
   ],
-});
+})
