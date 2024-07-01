@@ -1,3 +1,6 @@
+import { type ClassValue, clsx } from 'clsx'
+import { twMerge } from 'tailwind-merge'
+
 export function getErrorMessage(error: unknown) {
   if (typeof error === 'string') return error
   if (
@@ -10,4 +13,8 @@ export function getErrorMessage(error: unknown) {
   }
   console.error('Unable to get error message for error', error)
   return 'Unknown Error'
+}
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs))
 }
