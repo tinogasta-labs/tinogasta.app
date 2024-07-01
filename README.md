@@ -1,53 +1,20 @@
-# Welcome to Remix + Cloudflare!
+**Tinogasta App** es una aplicación web diseñada para que los prestadores de
+servicios de la ciudad creen fácilmente un perfil y muestren lo que ofrecen al
+público. Esta herramienta facilita el contacto con clientes potenciales,
+proporcionando un servicio rápido y accesible para todos.
 
-- 📖 [Remix docs](https://remix.run/docs)
-- 📖 [Remix Cloudflare docs](https://remix.run/guides/vite#cloudflare)
+## Estado del Proyecto
 
-## Development
+El proyecto se encuentra actualmente en una fase inicial de desarrollo. Esto
+significa que el sitio puede presentar fallos y aún no alcanza la madurez de un
+Producto Mínimo Viable (MVP). Sin embargo, estamos dedicados a realizar mejoras
+continuas, corregir errores y refinar el diseño. _Recuerda que las cosas bonitas
+necesitan tiempo._
 
-Run the dev server:
+## ¿Por Qué Código Abierto?
 
-```sh
-npm run dev
-```
-
-To run Wrangler:
-
-```sh
-npm run build
-npm run start
-```
-
-## Typegen
-
-Generate types for your Cloudflare bindings in `wrangler.toml`:
-
-```sh
-npm run typegen
-```
-
-You will need to rerun typegen whenever you make changes to `wrangler.toml`.
-
-## Deployment
-
-> [!WARNING]  
-> Cloudflare does _not_ use `wrangler.toml` to configure deployment bindings.
-> You **MUST** [configure deployment bindings manually in the Cloudflare dashboard][bindings].
-
-First, build your app for production:
-
-```sh
-npm run build
-```
-
-Then, deploy your app to Cloudflare Pages:
-
-```sh
-npm run deploy
-```
-
-[bindings]: https://developers.cloudflare.com/pages/functions/bindings/
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever css framework you prefer. See the [Vite docs on css](https://vitejs.dev/guide/features.html#css) for more information.
+El objetivo es desarrollar esta plataforma de manera colaborativa y con
+transparencia total. Hacemos el código accesible para que cualquiera pueda
+explorarlo y animarse a contribuir o realizar proyectos similares para la
+comunidad. Invitamos a todos a participar en esta iniciativa y ayudar a mejorar
+el sitio con sus ideas y contribuciones.
