@@ -5,6 +5,7 @@ import {
 import { defineConfig } from 'vite'
 import { flatRoutes } from 'remix-flat-routes'
 import tsconfigPaths from 'vite-tsconfig-paths'
+import { getLoadContext } from './load-context'
 
 const MODE = process.env.NODE_ENV
 
@@ -15,7 +16,7 @@ export default defineConfig({
     minify: MODE === 'production',
   },
   plugins: [
-    remixCloudflareDevProxy(),
+    remixCloudflareDevProxy({ getLoadContext }),
     remix({
       future: {
         v3_fetcherPersist: true,

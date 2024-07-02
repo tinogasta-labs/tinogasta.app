@@ -19,18 +19,11 @@ export async function loader({ request }: LoaderFunctionArgs) {
   const url = new URL(request.url)
   await clearEmptyParams(url)
   const query = url.searchParams.get('q')
-  const services = search({ query })
-  return defer(
-    {
-      query,
-      services,
-    },
-    {
-      headers: {
-        'Cache-Control': 'public, max-age=3600',
-      },
-    },
-  )
+  const result = search({ query })
+  return defer({
+    query,
+    services: result,
+  })
 }
 
 export default function SearchRoute() {
